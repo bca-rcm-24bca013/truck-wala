@@ -1,0 +1,887 @@
+/* =========================================
+   TRUCK WALA
+   VINTAGE • CUTE • RESPONSIVE
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    linear-gradient(
+      180deg,
+      #18345c 0%,
+      #284b76 42%,
+      #714c5b 68%,
+      #b7472b 100%
+    );
+
+  color: #fff1d0;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================================
+   APP
+   ========================================= */
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 25px 50px;
+  overflow: hidden;
+}
+
+/* vintage texture */
+
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.06;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 4px,
+      #fff 5px
+    );
+
+  z-index: 100;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  margin: 20px 0 0;
+
+  font-size: clamp(60px, 9vw, 125px);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: #fff1ca;
+
+  letter-spacing: 5px;
+
+  text-shadow:
+    5px 5px 0 #a6402c,
+    9px 9px 0 rgba(42, 24, 25, 0.4);
+}
+
+.title-decoration {
+  width: 280px;
+  height: 7px;
+
+  margin: 15px auto;
+
+  background: #d88c43;
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   TOP CONTROLS
+   ========================================= */
+
+.top-controls {
+  position: relative;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 25px 5px 0;
+
+  z-index: 10;
+}
+
+.playlist-btn {
+  border: 2px solid #d9aa70;
+
+  background: #142d4d;
+
+  color: #ffecc2;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 0 #0d1e34;
+
+  transition: 0.2s;
+}
+
+.playlist-btn:hover {
+  transform: translateY(-2px);
+
+  background: #9d422c;
+}
+
+.horn {
+  padding: 11px 18px;
+
+  border: 2px solid rgba(255, 231, 184, 0.4);
+
+  border-radius: 30px;
+
+  background: rgba(255, 231, 184, 0.13);
+
+  backdrop-filter: blur(5px);
+
+  font-weight: bold;
+
+  font-size: 15px;
+}
+
+.horn span {
+  display: block;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  opacity: 0.75;
+
+  margin-top: 2px;
+}
+
+/* =========================================
+   TRUCK SECTION
+   ========================================= */
+
+.truck-section {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 90px;
+}
+
+.truck {
+  width: min(1050px, 95vw);
+
+  height: 330px;
+
+  position: relative;
+}
+
+/* =========================================
+   TRAILER
+   ========================================= */
+
+.trailer {
+  position: absolute;
+
+  left: 2%;
+
+  bottom: 65px;
+
+  width: 70%;
+
+  height: 205px;
+
+  background: #071321;
+
+  border-radius: 7px 3px 3px 7px;
+
+  border: 5px solid #091523;
+
+  box-shadow:
+    inset 0 18px 0 #2d5079,
+    inset 0 -15px 0 #050d17;
+}
+
+.trailer-roof {
+  position: absolute;
+
+  left: -5px;
+  right: -5px;
+
+  top: -5px;
+
+  height: 30px;
+
+  background: #315b87;
+
+  border-radius: 55px 55px 0 0;
+}
+
+.trailer-body {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  top: 70px;
+  bottom: 35px;
+
+  background: #08121e;
+}
+
+.trailer-lines {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 12px;
+
+  background: #0d1b2a;
+}
+
+.trailer-panels {
+  height: 100%;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  padding: 0 10px;
+}
+
+.trailer-panels span {
+  width: 30px;
+  height: 82px;
+
+  background: #050e19;
+
+  border-radius: 2px;
+}
+
+/* =========================================
+   CAB
+   ========================================= */
+
+.cab {
+  position: absolute;
+
+  right: 1%;
+
+  bottom: 65px;
+
+  width: 30%;
+
+  height: 205px;
+
+  background: #101e31;
+
+  border: 5px solid #0a1422;
+
+  border-radius: 4px 35px 4px 4px;
+
+  box-shadow: inset 0 12px 0 #ef8b1d;
+}
+
+.cab-roof {
+  position: absolute;
+
+  top: -5px;
+  left: 0;
+  right: 0;
+
+  height: 32px;
+
+  background: #f18a1d;
+
+  border-radius: 5px 40px 0 0;
+}
+
+.cab-window {
+  position: absolute;
+
+  top: 55px;
+  left: 20px;
+  right: 20px;
+
+  height: 70px;
+
+  background: #2e5683;
+
+  border: 4px solid #0b1827;
+
+  border-radius: 5px;
+}
+
+.cab-door {
+  position: absolute;
+
+  top: 130px;
+
+  left: 20px;
+  right: 20px;
+
+  height: 50px;
+
+  border-left: 2px solid #0a1624;
+}
+
+.door-handle {
+  position: absolute;
+
+  top: 15px;
+  right: 5px;
+
+  width: 25px;
+  height: 6px;
+
+  border-radius: 5px;
+
+  background: #263d5c;
+}
+
+.headlight {
+  position: absolute;
+
+  right: -11px;
+
+  bottom: 35px;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #ffd176;
+
+  box-shadow:
+    0 0 18px #ffd176;
+}
+
+.bumper {
+  position: absolute;
+
+  bottom: -5px;
+
+  left: -5px;
+  right: -5px;
+
+  height: 12px;
+
+  background: #ad3d29;
+}
+
+/* =========================================
+   WHEELS
+   ========================================= */
+
+.wheel {
+  position: absolute;
+
+  bottom: 15px;
+
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  background: #07111d;
+
+  border: 8px solid #0e1c2d;
+
+  z-index: 5;
+
+  box-shadow:
+    0 5px 0 rgba(0, 0, 0, 0.3),
+    inset 0 0 0 8px #07111c;
+}
+
+.wheel-center {
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  left: 14px;
+  top: 14px;
+
+  border-radius: 50%;
+
+  background: #4c607c;
+
+  border: 5px solid #18263a;
+}
+
+.wheel-1 {
+  left: 10%;
+}
+
+.wheel-2 {
+  left: 38%;
+}
+
+.wheel-3 {
+  left: 65%;
+}
+
+.wheel-4 {
+  right: 4%;
+}
+
+/* =========================================
+   SONG TITLE
+   ========================================= */
+
+.now-playing-title {
+  text-align: center;
+
+  margin-top: 0;
+
+  font-size: 24px;
+
+  color: #fff0c9;
+
+  text-shadow: 2px 2px 0 #743222;
+}
+
+.now-playing-title span {
+  margin-left: 10px;
+}
+
+/* =========================================
+   PLAYER
+   ========================================= */
+
+.player {
+  width: min(680px, 94vw);
+
+  margin: 20px auto 0;
+
+  padding: 18px 22px;
+
+  display: grid;
+
+  grid-template-columns: 65px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: rgba(102, 47, 30, 0.92);
+
+  border: 2px solid #d58a4b;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 35px rgba(40, 15, 10, 0.35),
+    inset 0 1px rgba(255, 240, 200, 0.25);
+}
+
+.album-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #7b20d4,
+    #4320a9
+  );
+
+  font-size: 28px;
+
+  box-shadow: inset 0 0 15px rgba(255,255,255,0.12);
+}
+
+.song-name {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #fff2d2;
+}
+
+.artist {
+  margin-top: 4px;
+
+  font-size: 14px;
+
+  color: #e8cda8;
+}
+
+.controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.controls button {
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #f2d092;
+
+  color: #693321;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+
+  background: #fff0c8;
+}
+
+.controls .play-button {
+  width: 45px;
+  height: 45px;
+
+  font-size: 18px;
+}
+
+.progress-area {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns: 40px 1fr 40px;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 12px;
+
+  color: #f4d9b0;
+}
+
+.progress-area input {
+  width: 100%;
+
+  accent-color: #f2bd67;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   PLAYLIST
+   ========================================= */
+
+.playlist-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(5, 12, 22, 0.55);
+
+  z-index: 200;
+
+  backdrop-filter: blur(3px);
+}
+
+.playlist {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: min(360px, 90vw);
+
+  height: 100%;
+
+  padding: 25px;
+
+  background: #101d31;
+
+  border-left: 3px solid #d49a61;
+
+  box-shadow: -10px 0 35px rgba(0,0,0,0.35);
+
+  overflow-y: auto;
+}
+
+.playlist-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.playlist-header h2 {
+  margin: 0;
+
+  color: #ffeac0;
+}
+
+.close-btn {
+  border: 0;
+
+  background: transparent;
+
+  color: #ffeac0;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+.playlist-list {
+  margin-top: 20px;
+}
+
+.playlist-item {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  text-align: left;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  margin-bottom: 8px;
+
+  background: #223550;
+
+  color: #ffeac0;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.playlist-item:hover {
+  background: #8f402c;
+
+  transform: translateX(-3px);
+}
+
+.playlist-item.active {
+  background: #465269;
+
+  border: 1px solid #d2a16a;
+}
+
+.playlist-item strong {
+  display: block;
+
+  font-size: 16px;
+}
+
+.playlist-item small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #cdbb9f;
+}
+
+.number {
+  font-weight: bold;
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .truck {
+    transform: scale(0.85);
+
+    transform-origin: center bottom;
+  }
+
+  .truck-section {
+    margin-top: 60px;
+  }
+
+  .player {
+    grid-template-columns: 58px 1fr;
+
+  }
+
+  .controls {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    padding: 15px 10px 35px;
+  }
+
+  .header h1 {
+    font-size: 58px;
+
+    letter-spacing: 2px;
+  }
+
+  .title-decoration {
+    width: 160px;
+  }
+
+  .top-controls {
+    margin-top: 15px;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    align-items: stretch;
+  }
+
+  .playlist-btn {
+    align-self: flex-end;
+  }
+
+  .horn {
+    align-self: flex-start;
+  }
+
+  .truck-section {
+    margin-top: 35px;
+
+    height: 245px;
+
+    overflow: hidden;
+  }
+
+  .truck {
+    width: 900px;
+
+    height: 300px;
+
+    transform: scale(0.55);
+
+    transform-origin: center bottom;
+
+    flex-shrink: 0;
+  }
+
+  .now-playing-title {
+    font-size: 20px;
+  }
+
+  .player {
+    width: 96vw;
+
+    grid-template-columns: 55px 1fr;
+
+    padding: 15px;
+
+    border-radius: 18px;
+  }
+
+  .album-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .song-name {
+    font-size: 16px;
+  }
+
+  .artist {
+    font-size: 12px;
+  }
+
+  .controls {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    margin-top: 5px;
+  }
+
+  .progress-area {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .header h1 {
+    font-size: 48px;
+  }
+
+  .truck-section {
+    height: 210px;
+  }
+
+  .truck {
+    transform: scale(0.47);
+  }
+
+  .horn {
+    font-size: 13px;
+  }
+
+  .controls button {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Hawa Hawai",
+    "artist": "Kavita Krishnamurti",
+    "src": "/songs/song1.mp3"
+  },
+  {
+    "title": "Song 2",
+    "artist": "Unknown Artist",
+    "src": "/songs/song2.mp3"
+  },
+  {
+    "title": "Song 3",
+    "artist": "Unknown Artist",
+    "src": "/songs/song3.mp3"
+  },
+  {
+    "title": "Abhi Na Jao Chhod Kar",
+    "artist": "Asha Bhosle, Mohammed Rafi",
+    "src": "/songs/song4.mp3"
+  }
+]
